@@ -74,6 +74,9 @@ typings/
 
 # FuseBox cache
 .fusebox/
+
+# npm config
 package-lock.json
-package-lock.json
-package-lock.json
+
+# webpack
+dist/
