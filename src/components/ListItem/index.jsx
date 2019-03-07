@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 // 属性验证
 const propTypes = {
     item: PropTypes.object,
-    onClick: propTypes.func
+    onClick: PropTypes.func
 };
 
 // 组件主体，这里是stateless function，所以直接就是一个函数

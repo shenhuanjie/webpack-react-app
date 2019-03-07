@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
 
-// import CreateBar from '../CreateBar';
-// import List from '../List';
-// import ItemEditor from '../ItemEditor';
-// import ItemShowLayer from '../ItemShowLayer';
+import CreateBar from '../CreateBar';
+import List from '../List';
+import ItemEditor from '../ItemEditor';
+import ItemShowLayer from '../ItemShowLayer';
 
 import './style.scss';
 
@@ -100,26 +100,26 @@ class Deskmark extends Component {
     render() {
         const { items, selectedId, editing } = this.state;
         const selected = selectedId && items.find(item => item.id === selectedId);
-        // const mainPart = editing
-        //     ? (
-        //         <ItemEditor item={selected} onSave={this.saveItem} onCancel={this.cancelEdit} />
-        //     )
-        //     : (
-        //         <ItemShowLayer item={selected} onEdit={this.editItem} onDelete={this.deleteItem} />
-        //     );
+        const mainPart = editing
+            ? (
+                <ItemEditor item={selected} onSave={this.saveItem} onCancel={this.cancelEdit} />
+            )
+            : (
+                <ItemShowLayer item={selected} onEdit={this.editItem} onDelete={this.deleteItem} />
+            );
 
         return (
             <section className="deskmark-component">
                 <nav className="navbar navbar-fixed-top navbar-dark bg-inverse">
-                    <a className="navbar-brand" href="#">Deskmark App</a>
+                    <a className="navbar-title" href="#">Deskmark App</a>
                 </nav>
                 <div className="container">
                     <div className="row">
-                        {/* <div className="col-md-4 list-group">
+                        <div className="col-md-4 list-group">
                             <CreateBar onClick={this.createItem} />
                             <List items={this.state.items} onSelect={this.selectItem} />
                         </div>
-                        {mainPart} */}
+                        {mainPart}
                     </div>
                 </div>
             </section>

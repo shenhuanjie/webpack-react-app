@@ -1,5 +1,22 @@
 .deskmark-component {
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 5px;
+    // max-width: 750px;
+
+    .navbar-title {
+        color: rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+        margin-right: 1rem;
+        font-size: 1.25rem;
+        line-height: inherit;
+        white-space: nowrap;
+    }
+
     .container {
-        margin-top: 50px;
+        margin-top: 20px;
     }
 }

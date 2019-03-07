@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Marked from 'marked';
+import './style.scss';
 
 // 属性验证
 const propTypes = {
@@ -20,7 +21,7 @@ function ItemShowLayer({ item, onEdit, onDelete }) {
     }
     // 将Markdown转换成HTML
     // 注意在渲染HTML代码时使用了描述过的JSX转义写法dangerouslySetInnerHTML
-    const content = marked(item.content);
+    const content = Marked(item.content);
     // 返回JSX结构
     return (
         <div className="col-md-8 item-show-layer-component">
